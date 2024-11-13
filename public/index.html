@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores y Trofeos</title>
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <h1>Jugadores</h1>
+    <table class="lista-jugadores">
+        <tr>
+            <th>Nombre del Jugador</th>
+            <th>Trofeos</th>
+            <th></th>
+        </tr>
+    </table>
+
+    <h1>Añadir Jugador</h1>
+    <form name="createJugador">
+        <label for="nombreJugador">Nombre del Jugador</label>
+        <input type="text" id="nombreJugador" name="nombreJugador" required />
+        <input type="submit" class="btn submit jugador" value="Crear Jugador" />
+    </form>
+
+    <h1>Trofeos</h1>
+    <table class="lista-trofeos">
+        <tr>
+            <th>Título del Trofeo</th>
+            <th>Descripción</th>
+            <th>Jugadores con este trofeo</th>
+            <th></th>
+        </tr>
+    </table>
+
+    <h1>Añadir Trofeo</h1>
+    <form name="createTrofeo">
+        <label for="tituloTrofeo">Título del Trofeo</label>
+        <input type="text" id="tituloTrofeo" name="tituloTrofeo" required />
+        <label for="descripcionTrofeo">Descripción</label>
+        <input type="text" id="descripcionTrofeo" name="descripcionTrofeo" required />
+        <input type="submit" class="btn submit trofeo" value="Crear Trofeo" />
+    </form>
+
+    <h1>Asignar Trofeo a Jugador</h1>
+    <form name="assignTrofeo">
+        <label for="jugadorId">Selecciona un Jugador</label>
+        <select id="jugadorId" name="jugadorId" required>
+            <option value="">--Seleccione un Jugador--</option>
+        </select>
+        <label for="trofeoId">Selecciona un Trofeo</label>
+        <select id="trofeoId" name="trofeoId" required>
+            <option value="">--Seleccione un Trofeo--</option>
+        </select>
+        <input type="submit" class="btn submit asignar" value="Asignar Trofeo" />
+    </form>
+</body>
+</html>
